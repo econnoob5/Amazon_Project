@@ -30,11 +30,10 @@ if (length_begin - length_final) == i:
 
 comp_na_daily_nodup.to_csv(
     r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\Firms List\Firms list compustat\list_of_firms_compustat.csv")
-dropped.to_excel(
-    r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\Firms List\Firms list compustat\firms_nocusip_compustat.xlsx")
-
 comp_na_daily_nodup.to_excel(
     r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\Firms List\Firms list compustat\list_of_firms_compustat.xlsx")
+dropped.to_excel(
+    r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\Firms List\Firms list compustat\firms_nocusip_compustat.xlsx")
 
 print("hello, I'm done")
 
