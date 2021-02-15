@@ -2,6 +2,7 @@ import pandas as pd
 import gzip
 import json
 import os
+import openpyxl
 
 def parse(path):
     g = gzip.open(path, 'rb')
@@ -74,7 +75,8 @@ all_col_values.insert(1, column='Number of Columns', value=number_of_columns)
 # all_col_values.to_excel(r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\support_data\reviews_structure.xlsx")
 
 # server directory
-all_col_values.to_excel(r"/data/users/mlaudi/Amazon/Data/support_data\reviews_structure.xlsx")
+all_col_values.to_excel(r"/data/users/mlaudi/Amazon/Data/support_data/reviews_structure.xlsx")
+all_col_values.to_csv(r"/data/users/mlaudi/Amazon/Data/support_data/reviews_structure.csv")
 print("Phew, that was a lot of work!")
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

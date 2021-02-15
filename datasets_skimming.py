@@ -20,4 +20,4 @@ def getDF(path):
 # server directory
 server_dir = r"/data/users/mlaudi/Amazon/Data/Metadata"
 
-for file in os.listdir()
+# for file in os.listdir()

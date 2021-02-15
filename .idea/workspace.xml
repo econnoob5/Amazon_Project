@@ -2,28 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bad0cc7-ef4d-4bc6-8070-213445df3810" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Amazon Project - Code.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scraping Capital IQ.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chromedriver.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firms_list_cleaning.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geckodriver.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/merge_code v6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmpr2803ulw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Amazon Project - Data/Firms lists from NASDAQ/Firms lists cleaned/nasdaq_screener_nasdaq_nodup.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Amazon Project - Data/Firms lists from NASDAQ/Firms lists to clean/nasdaq_screener_amex.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Amazon Project - Data/Firms lists from NASDAQ/Firms lists to clean/nasdaq_screener_nasdaq.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Amazon Project - Data/Firms lists from NASDAQ/Firms lists to clean/nasdaq_screener_nyse.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Scraps/Scraping_Capital_IQ.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Mattia IntelliJ.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Scraping - Capital IQ.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets_skimming.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasets_skimming.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metadata_structure_json_gz.py" beforeDir="false" afterPath="$PROJECT_DIR$/metadata_structure_json_gz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reviews_struccture_json_gz.py" beforeDir="false" afterPath="$PROJECT_DIR$/reviews_struccture_json_gz.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +21,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1nvPP5RKnKMJ1FDlLEIv6amhA39" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -126,8 +109,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.firms_list_cleaning" />
         <item itemvalue="Python.Scraping Capital IQ" />
+        <item itemvalue="Python.firms_list_cleaning" />
         <item itemvalue="Python.merge_code v6" />
       </list>
     </recent_temporary>
