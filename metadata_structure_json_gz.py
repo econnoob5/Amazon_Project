@@ -2,7 +2,11 @@ import pandas as pd
 import gzip
 import json
 import os
+import xlsxwriter
+from openpyxl import load_workbook
 import openpyxl
+from openpyxl.utils.dataframe import dataframe_to_rows
+
 
 def parse(path):
     g = gzip.open(path, 'rb')
@@ -21,11 +25,15 @@ def getDF(path):
 
 # # extract project directory
 # project_dir = os.path.dirname(os.path.dirname(__file__))
-# # set directory to 'Metadata'
+# # # set directory to 'Metadata'
 # metadata_directory = os.path.join(project_dir, "Amazon Project - Data/Metadata")
 
 # server directory
 server_dir = r"/data/users/mlaudi/Amazon/Data/Metadata"
+
+"""
+Create Excel file to visualize metadata files column structure
+"""
 
 full_list_columns = []
 for file in os.listdir(server_dir):
@@ -52,7 +60,7 @@ for file in os.listdir(server_dir):
     filename = "/" + file
     df = getDF(server_dir + filename)
     print("Executing {}".format(filename[1:-8]))
-    
+
     df_columns = df.columns
     col_values=[]
     for col in full_list_columns:
@@ -62,7 +70,7 @@ for file in os.listdir(server_dir):
             col_values.append('Yes')
     temp = pd.Series(col_values, index=full_list_columns)
     all_col_values = all_col_values.append(temp, ignore_index=True)
-    
+
     num_columns = len(df.columns)
     number_of_columns.append(num_columns)
 
@@ -76,7 +84,7 @@ all_col_values.insert(1, column='Number of Columns', value=number_of_columns)
 
 # server directory
 all_col_values.to_excel(r"/data/users/mlaudi/Amazon/Data/support_data/metadata_structure.xlsx")
-all_col_values.to_csv(r"/data/users/mlaudi/Amazon/Data/support_data/metadata_structure.csv")
+
 print("Phew, that was a lot of work!")
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -154,3 +162,29 @@ print("Phew, that was a lot of work!")
 # json_structure = json_structure.append(stacking_2, ignore_index=True)
 # print(file_name + ' - ' + column_number + " " + "columns")
 # print(column_list)
+
+
+# """
+# Create Excel workbooks and add details to the workbooks
+# """
+# # Set paths
+#
+# # excel_dir_perseus = r"/data/users/mlaudi/Amazon/Data/support_data"
+# excel_dir_windows = r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\support_data"
+#
+# # open excel file
+# metadata_structure = pd.read_excel(excel_dir_windows + '/metadata_structure.xlsx')
+#
+# excel_sheet2 = pd.DataFrame()
+# metadata_structure_columns = pd.Series(metadata_structure.columns[3:], name='columns')
+# excel_sheet2['Column Name'] = metadata_structure_columns
+# excel_sheet2['Description'] = ""
+#
+# wb = load_workbook(excel_dir_windows + '/metadata_structure.xlsx')
+# ws = wb['Sheet1']
+# ws.title = "Metadata structure"
+# wb.save(excel_dir_windows + '/metadata_structure.xlsx')
+#
+# with pd.ExcelWriter(metadata_structure, engine='xlsxwriter') as writer:
+#     excel_sheet2.to_excel(writer, 'Column descriptions')
+#     writer.save()

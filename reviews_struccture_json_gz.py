@@ -76,7 +76,7 @@ all_col_values.insert(1, column='Number of Columns', value=number_of_columns)
 
 # server directory
 all_col_values.to_excel(r"/data/users/mlaudi/Amazon/Data/support_data/reviews_structure.xlsx")
-all_col_values.to_csv(r"/data/users/mlaudi/Amazon/Data/support_data/reviews_structure.csv")
+
 print("Phew, that was a lot of work!")
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
