@@ -28,7 +28,7 @@ metadata_directory = os.path.join(project_dir, "Amazon Project - Data/Metadata")
 # set directory to 'Reviews'
 reviews_directory = os.path.join(project_dir, "Amazon Project - Data/Reviews")
 # set metadata file name to be opened. Paste file name in the blank "", do not edit "/"
-file_metadata = "/" + "meta_Home_and_Kitchen.json.gz"
+file_metadata = "/" + "meta_Grocery_and_Gourmet_Food.json.gz"
 # set reviews file name to be opened. Paste file name in the blank "", do not edit "/"
 file_reviews = "/" + "All_Beauty.json.gz"
 
