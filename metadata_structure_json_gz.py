@@ -1,3 +1,14 @@
+"""
+The following code builds an excel table to display the structure of the 'Metadata' json files.
+The OUTPUT is as following: - rows: dataset name
+                            - columns: first column, number of columns in the dataset
+                                       following columns, name of the json columns
+                            if a dataset has a certain column the corresponding entry of dataset_name-column_name is a
+                            'Yes', otherwise a 'No'
+
+The PURPOSE is to illustrate the non-user-friendly content of the json files for easy understanding.
+"""
+
 import pandas as pd
 import gzip
 import json
