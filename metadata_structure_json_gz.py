@@ -13,11 +13,6 @@ import pandas as pd
 import gzip
 import json
 import os
-import xlsxwriter
-from openpyxl import load_workbook
-import openpyxl
-from openpyxl.utils.dataframe import dataframe_to_rows
-
 
 def parse(path):
     g = gzip.open(path, 'rb')

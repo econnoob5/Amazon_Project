@@ -3,7 +3,7 @@ import gzip
 import json
 import os
 
-# The following two functions are used to parse the json files and to open the as a Pandas DataFrame
+# The following two functions are used to parse the GZIPPED json files and to open the as a Pandas DataFrame
 def parse(path):
     g = gzip.open(path, 'rb')
     for l in g:
@@ -55,7 +55,7 @@ for file in os.listdir(server_target_dir):
     # set order of column dataframe
     df = df[columns_order]
     print(df.columns)
-    df.reset_index().to_json(server_save_dir + "/{}".format(file[:-3]), orient='records', lines=True)
+    df.to_json(server_save_dir + "/{}".format(file[:-3]), orient='records', lines=True)
 
 writeToJSONFile(server_support_data_dir, 'reviews_skimming_dropped_columns', dropped_full_list)
 

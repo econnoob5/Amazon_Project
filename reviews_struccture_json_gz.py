@@ -13,7 +13,6 @@ import pandas as pd
 import gzip
 import json
 import os
-import openpyxl
 
 def parse(path):
     g = gzip.open(path, 'rb')

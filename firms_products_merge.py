@@ -21,16 +21,17 @@ target_df_skimmed = target_df.drop(columns=['start_', 'end_', 'name', 'active', 
                                    'fyear', 'indfmt', 'consol', 'popsrc', 'datafmt', 'tic', 'curcd', 'costat'], axis=1)
 
 # compute two simple statistics for general overview
-average_number_of_products_per_firm = len(target_df['cusip']) / len(firms['cusip'])
 total_number_firms = target_df['cusip'].nunique()
+total_number_products = target_df['product_id'].nunique()
+avg_number_products_firm = total_number_products / total_number_firms
 
-target_df.to_csv(
-    r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\firms_products_link\firms_products_allcolumns.csv")
-
-target_df.to_excel(
-    r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\firms_products_link\firms_products_allcolumns.xlsx")
-
-target_df_skimmed.to_csv( r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\firms_products_link\firms_products_skimmed.csv")
-target_df_skimmed.to_excel(r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\firms_products_link\firms_products_skimmed.xlsx")
+# target_df.to_csv(
+#     r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\firms_products_link\firms_products_allcolumns.csv")
+#
+# target_df.to_excel(
+#     r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\firms_products_link\firms_products_allcolumns.xlsx")
+#
+# target_df_skimmed.to_csv( r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\firms_products_link\firms_products_skimmed.csv")
+# target_df_skimmed.to_excel(r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\firms_products_link\firms_products_skimmed.xlsx")
 
 print("we are here")
