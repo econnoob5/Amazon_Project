@@ -13,11 +13,11 @@ import scripts.functions.main_functions as MainFunc
 # df_tdmks = pd.read_csv(dir_load_amz_brands, low_memory=False)
 
 # server directories
-dir_load_amz_brands = r"/data/users/mlaudi/amazon_project/data/metadata_small_brandnodup"
-dir_load_tdmks = r"/data/users/mlaudi/" \
-                 r"amazon_project/data/cleaned/uspto/trademarks_case_files_dataset/casefiles_owner_nodup_nonans.csv"
-dir_save = r"/data/users/mlaudi/amazon_project/data/results/matching/trademarks"
-df_tdmks = pd.read_csv(dir_load_tdmks)
+# dir_load_amz_brands = r"/data/users/mlaudi/amazon_project/data/metadata_small_brandnodup"
+# dir_load_tdmks = r"/data/users/mlaudi/" \
+#                  r"amazon_project/data/cleaned/uspto/trademarks_case_files_dataset/casefiles_owner_nodup_nonans.csv"
+# dir_save = r"/data/users/mlaudi/amazon_project/data/results/matching/trademarks"
+# df_tdmks = pd.read_csv(dir_load_tdmks)
 
 """"""""""""""""""""""""""""""""""""""""""""""""" Matching """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

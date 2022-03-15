@@ -34,14 +34,14 @@ def getDF(path):
 """"""""""""""""""""""""""""""""""""""""""""" Setting directories """""""""""""""""""""""""""""""""""""""""""""""""""""
 # ----------------- test directories -----------------
 # set server test directories
-# dir_load = r"/data/users/mlaudi/Amazon/Amazon Project - Data/Tests/Metadata_test_load"
-# dir_save = r"/data/users/mlaudi/Amazon/Amazon Project - Data/Tests/Metadata_test_save"
+# dir_load = r"/data/users/mlaudi/Amazon/Amazon Project - Data/Tests/metadata_test_load"
+# dir_save = r"/data/users/mlaudi/Amazon/Amazon Project - Data/Tests/metadata_test_save"
 # csv_file = r"/data/users/mlaudi/Amazon/Amazon Project - Data/firms_products_link/firms_products_skimmed_nodup.csv"
 
 # set PC test directories
 PROJECT_ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "\\"
 TARGET_FOLDER_ROOT_DIR = r"Amazon Project - Data/Metadata_small-brand_nodup"
-SAVING_FOLDER_ROOT_DIR = r"Amazon Project - Data/Tests/Metadata_test_save"
+SAVING_FOLDER_ROOT_DIR = r"Amazon Project - Data/Tests/metadata_test_save"
 dir_load = os.path.join(PROJECT_ROOT_DIR, TARGET_FOLDER_ROOT_DIR)
 dir_save = os.path.join(PROJECT_ROOT_DIR, SAVING_FOLDER_ROOT_DIR)
 csv_file = os.path.join(PROJECT_ROOT_DIR + "Amazon Project - Data/firms_products_link/firms_products_skimmed_nodup.csv")
@@ -107,5 +107,5 @@ for file in os.listdir(dir_load):
     print("- - - - - - - - - - - - - {} took {} minutes - - - - - - - - - - - -".format(file[:-5], iteration_time_file))
 
 # save to server test directories
-# df_ratios.to_excel(r"/data/users/mlaudi/Amazon/Data/Tests/Metadata_test_save/ratios_brand_prodname.xlsx")
-# df_iterations.to_excel(r"/data/users/mlaudi/Amazon/Data/Tests/Metadata_test_save/iterations_time_test.xlsx")
+# df_ratios.to_excel(r"/data/users/mlaudi/Amazon/Data/Tests/metadata_test_save/ratios_brand_prodname.xlsx")
+# df_iterations.to_excel(r"/data/users/mlaudi/Amazon/Data/Tests/metadata_test_save/iterations_time_test.xlsx")

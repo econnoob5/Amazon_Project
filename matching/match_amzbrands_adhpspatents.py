@@ -35,12 +35,12 @@ def getDF(path):
 # set PC directories
 # df_adhps = pd.read_stata(r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\Matching_procedure\merged_documentid_adhps.dta")
 # dir_load = r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\Metadata\Metadata_small-brand_nodup"
-# dir_save = r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\Tests\Metadata_test_save\trademarks_test"
+# dir_save = r"D:\OneDrive - IESE Business School\Documentos\Amazon Project\Amazon Project - Data\Tests\metadata_test_save\trademarks_test"
 
 # server directories
 df_adhps = pd.read_stata(r"/data/users/mlaudi/Amazon/Amazon Project - Data/matching_firms_and_brands/trademarks/merged_documentid_adhps.dta")
 dir_load = r"/data/users/mlaudi/Amazon/Amazon Project - Data/Metadata_small-brand_nodup"
-dir_save = r"/data/users/mlaudi/Amazon/Amazon Project - Data/Tests/Metadata_test_save/trademarks_test"
+dir_save = r"/data/users/mlaudi/Amazon/Amazon Project - Data/Tests/metadata_test_save/trademarks_test"
 
 """"""""""""""""""""""""""""""""""""""""""""""""" Matching """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

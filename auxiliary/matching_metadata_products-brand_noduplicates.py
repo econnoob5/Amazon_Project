@@ -39,8 +39,8 @@ def writeToJSONFile(save_path, fileName, data):
 # ----------------- test directories -----------------
 # set PC test directories
 # PROJECT_ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "\\"
-# TARGET_FOLDER_ROOT_DIR = r"Amazon Project - Data/Tests/Metadata_test_load"
-# SAVING_FOLDER_ROOT_DIR = r"Amazon Project - Data/Tests/Metadata_test_save"
+# TARGET_FOLDER_ROOT_DIR = r"Amazon Project - Data/Tests/metadata_test_load"
+# SAVING_FOLDER_ROOT_DIR = r"Amazon Project - Data/Tests/metadata_test_save"
 # dir_load = os.path.join(PROJECT_ROOT_DIR, TARGET_FOLDER_ROOT_DIR)
 # dir_save = os.path.join(PROJECT_ROOT_DIR, SAVING_FOLDER_ROOT_DIR)
 

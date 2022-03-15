@@ -31,8 +31,8 @@ def getDF(path):
 
 
 # set server test directories
-# server_load_dir_test = r"/data/users/mlaudi/Amazon/Data/Tests/Metadata_test_load"
-# server_save_dir_test = r"/data/users/mlaudi/Amazon/Data/Tests/Metadata_test_save"
+# server_load_dir_test = r"/data/users/mlaudi/Amazon/Data/Tests/metadata_test_load"
+# server_save_dir_test = r"/data/users/mlaudi/Amazon/Data/Tests/metadata_test_save"
 
 # server full run directories
 server_load_dir = r"/data/users/mlaudi/Amazon/Data/Metadata_small"
@@ -40,8 +40,8 @@ server_save_support = r"/data/users/mlaudi/Amazon/Data/support_data"
 
 # set PC test directories
 # PROJECT_ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "\\"
-# TARGET_FOLDER_ROOT_DIR = r"Amazon Project - Data/Tests/Metadata_test_load"
-# SAVING_FOLDER_ROOT_DIR = r"Amazon Project - Data/Tests/Metadata_test_save"
+# TARGET_FOLDER_ROOT_DIR = r"Amazon Project - Data/Tests/metadata_test_load"
+# SAVING_FOLDER_ROOT_DIR = r"Amazon Project - Data/Tests/metadata_test_save"
 # metadata_sample_dir = os.path.join(PROJECT_ROOT_DIR, TARGET_FOLDER_ROOT_DIR)
 # save_dir = os.path.join(PROJECT_ROOT_DIR, SAVING_FOLDER_ROOT_DIR)
 

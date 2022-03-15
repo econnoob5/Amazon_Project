@@ -1,33 +1,40 @@
+"""
+if when installing importing from 'sparse_dot_topn' appears 'ValueError: numpy.ndarray
+size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject',
+uninstall 'sparse_dot_topn' and re-install using 'pip install sparse_dot_topn --no-binary pycocotools'
+"""
+
 import numpy as np
 from scipy.sparse import csr_matrix
-import sparse_dot_topn.sparse_dot_topn as ct
+from sparse_dot_topn.awesome_cossim_topn import awesome_cossim_topn
+import re
+from sklearn.feature_extraction.text import TfidfVectorizer
+import os
+import scripts.functions.main_functions as MainFunc
+from scripts.helpers.setup import trademark_case_files_path, processed_data_dir
+import pandas as pd
+import time
+
+""" 
+Setting directories
+"""
+# local directory
+dir_load_amz_brands = os.path.join(trademark_case_files_path, 'casefiles_owner_nodup_nonans.csv')
+dir_save = os.path.join(processed_data_dir, 'matching_firms_and_brands/match_trademarks_amazon')
+df_tdmks = pd.read_csv(dir_load_amz_brands, low_memory=False)
 
 
-def awesome_cossim_top(A, B, ntop, lower_bound=0):
-    # force A and B as a CSR matrix.
-    # If they have already been CSR, there is no overhead
-    A = A.tocsr()
-    B = B.tocsr()
-    M, _ = A.shape
-    _, N = B.shape
+def ngrams(string, n=3):
+    string = re.sub(r'[,-./]|\sBD', r'', string)
+    get_ngrams = zip(*[string[i:] for i in range(n)])
+    return [''.join(ngram) for ngram in get_ngrams]
 
-    idx_dtype = np.int32
 
-    nnz_max = M * ntop
+iteration_number = 0
+for file in os.listdir(dir_load_amz_brands):
 
-    indptr = np.zeros(M + 1, dtype=idx_dtype)
-    indices = np.zeros(nnz_max, dtype=idx_dtype)
-    data = np.zeros(nnz_max, dtype=A.dtype)
+    iteration_number += 1
 
-    ct.sparse_dot_topn(
-        M, N, np.asarray(A.indptr, dtype=idx_dtype),
-        np.asarray(A.indices, dtype=idx_dtype),
-        A.data,
-        np.asarray(B.indptr, dtype=idx_dtype),
-        np.asarray(B.indices, dtype=idx_dtype),
-        B.data,
-        ntop,
-        lower_bound,
-        indptr, indices, data)
-
-    return csr_matrix((data, indices, indptr), shape=(M, N))
+    filename = "/" + file
+    âmazon_df = MainFunc.get_df(dir_load_amz_brands + filename)  # function to open json file as df
+    start_file = time.time()
