@@ -14,7 +14,7 @@ Functions description
 
 - df_cols_to_list: DataFrame columns to list
 
-- data_types. receives a list and returns a tuple with types list as first argument and exceptions encountered as second
+- data_types: receives a list and returns a tuple with types list as first argument and exceptions encountered as second
 
 - data_types_analysis: generalizes data_types for any number of lists. Returns a tuple with first arg a list of
                     dictionaries, one for each input list, with the description of the types, and as second argument a 
@@ -106,7 +106,7 @@ def data_types_analysis(input_list):
             output_analysis = output_analysis.append(dict_of_lists, ignore_index=True)
         except Exception as e:
             dict_except = {'column_name': column_name, 'error': e}
-            output_exceptions = output_exceptions.append(dict_except)
+            output_exceptions = output_exceptions.append(dict_except, ignore_index=True)
         print('Finished list {}'.format(column_name))
 
     # comfortable if we have column names as index in the output df
